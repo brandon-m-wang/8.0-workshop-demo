@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  font-family: Montserrat;
+  margin: 0;
+  height: 100vh;
+  background: lightcyan;
+}
+
+#navbar {
+  height: 50px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  background: steelblue;
+  justify-content: start;
+  align-items: center;
+}
+
+#navbar > * {
+  font-size: 15px;
+  position: relative;
+  padding-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar > *:first-child {
+  padding-left: 20px;
+}
+
+#navbar > *:last-child {
+  margin-left: auto;
+  /* You will see the free space at the right side of the last flex item.
+     And if you apply margin-left: auto to the last item, the positive free space 
+     will be taken up to the left dimension and the last flex item will be pushed 
+     to the right.
+  */
+}
+
+#about {
+  display: flex; /* Change flex direction to show responsive design. */
+  padding: 20px;
+}
+
+#about > * {
+  padding: 20px;
+}
+
+.description {
+  font-style: italic;
+}
+
+.button {
+  width: auto;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+  background: steelblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+@media screen and (max-width: 700px) {
+  /* Do this at the very end. */
+  #about {
+    flex-direction: column;
+  }
+}
